@@ -41,5 +41,19 @@ namespace DataStructures
                 temp = temp.next;
             }
         }
+        internal void AddReverse(int data) 
+        {
+            Node node = new Node(data);
+            if(this.head == null)
+            { 
+                this.head=node;
+            }
+            else
+            {
+                Node temp = head;
+                head = node;
+                head.next = temp;
+            }
+        }
     }
 }
