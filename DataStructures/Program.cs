@@ -6,13 +6,14 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World !");
+            Console.WriteLine("SEARCH OPERATIONS !");
 
             LinkedList list = new LinkedList();
-            list.Appending(56);
-            list.Appending(30);
-            list.Appending(70);
+            list.Add(56);
+            //list.Add(30);
+            list.Add(70);
             list.Display();
+            list.InsertAtParticularPosition(2, 30);
         }
     }
 }
