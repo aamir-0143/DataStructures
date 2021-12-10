@@ -9,7 +9,7 @@ namespace DataStructures
     public class LinkedList
     {
         internal Node head;
-        internal void Add(int data)
+        internal void Appending(int data) 
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -39,20 +39,6 @@ namespace DataStructures
             {
                 Console.WriteLine(temp.data + "  ");
                 temp = temp.next;
-            }
-        }
-        internal void AddReverse(int data) 
-        {
-            Node node = new Node(data);
-            if(this.head == null)
-            { 
-                this.head=node;
-            }
-            else
-            {
-                Node temp = head;
-                head = node;
-                head.next = temp;
             }
         }
     }
