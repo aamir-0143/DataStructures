@@ -12,8 +12,8 @@ namespace DataStructures
             list.Add(56);
             list.Add(30);
             list.Add(70);
-            list.RemoveFirstNode();
-          
+            //list.RemoveFirstNode();
+            list.RemoveLastNode();
             Console.WriteLine("After removing is : ");
             list.Display();
 
