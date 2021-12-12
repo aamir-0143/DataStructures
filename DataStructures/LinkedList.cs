@@ -41,50 +41,50 @@ namespace DataStructures
                 temp = temp.next;
             }
         }
-        //internal Node InsertAtParticularPosition(int position, int data) 
-        //{ 
-        //    if(position < 1) 
-        //    { 
-        //        Console.WriteLine("Invalid position");
+        internal Node InsertAtParticularPosition(int position, int data) 
+        { 
+            if(position < 1) 
+            { 
+                Console.WriteLine("Invalid position");
 
-        //        if(position == 1) 
-        //        {
-        //            var newNode = new Node(data);
-        //            newNode.next = this.head;
-        //            head = newNode;
-        //        }
-        //        else 
-        //        { 
-        //            while(position-- != 0)
-        //            { 
-        //                if(position == 1) 
-        //                {
-        //                    Node node = new Node(data);
-        //                    node.next = this.head.next;
-        //                    head.next = node;
-        //                    break;
-        //                }
-        //              head = head.next;
-        //           }
-        //if (position != 1)
+                if(position == 1) 
+                {
+                    var newNode = new Node(data);
+                    newNode.next = this.head;
+                    head = newNode;
+                }
+                else 
+                { 
+                    while(position-- != 0)
+                    { 
+                        if(position == 1) 
+                        {
+                            Node node = new Node(data);
+                            node.next = this.head.next;
+                            head.next = node;
+                            break;
+                        }
+                      head = head.next;
+                    }
+                    if (position != 1)
 
-        //              Console.WriteLine("Position out of rang");
-        //       }
+                      Console.WriteLine("Position out of rang");
+                }
                
-        //   }
-        //   Console.WriteLine("Inserted value is : " + data);
-        //    return head;
-        //}
+            }
+           Console.WriteLine("Inserted value is : " + data);
+            return head;
+        }
         
-        //internal Node RemoveFirstNode() 
-        //{
-        //    if (this.head == null)
-        //    { 
-        //        return null;
-        //    }
-        //    this.head = this.head.next;
-        //     return this.head;
-        //}
+        internal Node RemoveFirstNode() 
+        {
+            if (this.head == null)
+            { 
+                return null;
+            }
+            this.head = this.head.next;
+             return this.head;
+        }
 
         internal Node RemoveLastNode() 
         {
@@ -103,6 +103,23 @@ namespace DataStructures
             }
             NewNode.next = null;
             return head;
+        }
+
+        internal int Search(int value)
+        {
+            Node node = this.head;
+            int count = 0;
+            while(node != null)
+            {
+
+                if(node.data == value)
+                {
+                    return count;
+                }
+                node = node.next;
+                count++;
+            }
+            return count;
         }
            
     }
