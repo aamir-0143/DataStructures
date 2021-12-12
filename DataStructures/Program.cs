@@ -11,16 +11,21 @@ namespace DataStructures
             LinkedList list = new LinkedList();
             list.Add(56);
             list.Add(30);
+            list.Add(40);
             list.Add(70);
+            int position = list.Search(40);
+            list.DeleteNodeAtParticularPosition(position);
 
             //int search = list.Search(30);
             //Console.WriteLine(search);
 
-            int position = list.Search(30);
-            position++;
-            list.InsertAtParticularPosition(position, 40);
-            list.Display();
-            
+            //int position = list.Search(30);
+            //position++;
+            //list.InsertAtParticularPosition(position, 40);
+
+
+
+
 
 
 
