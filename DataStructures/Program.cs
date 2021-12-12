@@ -12,16 +12,23 @@ namespace DataStructures
             list.Add(56);
             list.Add(30);
             list.Add(70);
-            int search = list.Search(30);
-            Console.WriteLine(search);
+
+            //int search = list.Search(30);
+            //Console.WriteLine(search);
+
+            int position = list.Search(30);
+            position++;
+            list.InsertAtParticularPosition(position, 40);
+            list.Display();
             
 
 
 
-        //    list.RemoveFirstNode();
-        //    list.RemoveLastNode();
-        //    Console.WriteLine("After removing is : ");
-        //    list.InsertAtParticularPosition(2, 30);
+
+            //    list.RemoveFirstNode();
+            //    list.RemoveLastNode();
+            //    Console.WriteLine("After removing is : ");
+            //    list.InsertAtParticularPosition(2, 30);
         }
     }
 }
